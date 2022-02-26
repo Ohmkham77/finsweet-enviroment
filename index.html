@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>finsweet</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/75342929cd.js" crossorigin="anonymous"></script>
+
+
+    <link rel="stylesheet" href="style/navbar.css">
+
+
+    <link rel="stylesheet" href="style/home.css">
+
+</head>
+
+<body>
+    <nav class="navbar-container">
+        <div class="navbar">
+            <div class="row-container">
+                <div class="logo-container">
+                    <div class="logo">
+                        <p>{Finsweet</p>
+                    </div>
+                </div>
+                <div class="link-list-container">
+                    <ul class="link-list">
+                        <li class="link home" id="home-link">
+                            <a href="index.html">Home</a>
+                        </li>
+                        <li class="link about" id="about-link">
+                            <a href="About_us/about.html">About us</a>
+                        </li>
+                        <li class="link what" id="what-link">
+                            <a href="What_we_do/what.html">What we do</a>
+                        </li>
+                        <li class="link media" id="media-link">
+                            <a href="Media/media.html">Media</a>
+                        </li>
+                        <li class="link contact" id="contact-link">
+                            <a href="Contact_us/contact.html">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="donate-container">
+                    <div class="donate">
+                        <button id="donate">Donate</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="header-container">
+        <div class="header">
+            <div class="BG-video-container">
+                <video class="BG-video" src="video/BG-2.mp4" style="width: 97.81vmax;" loop></video>
+            </div>
+            <div class="header-text-container">
+                <div class="text">
+                    <h3 class="h-text">Save the environment today for a better tomorrow</h3>
+                    <div class="button-row">
+                        <button class="what-btn">
+                            <a href="what.html">What we do</a>
+                        </button>
+                        <button class="play-video-btn" onclick=videoPlay(event)>
+                            <div class="header-play-icon">
+                                <i class="fa-solid fa-play"></i>
+                            </div>
+                            <div class="header-pause-icon hide">
+                                <i class="fa-solid fa-pause"></i>
+                            </div>
+                            <span class="Btn">Play Video</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="statists">
+                <span class="s1">23,800 trees planted</span>
+                <span class="line"></span>
+                <span class="s2">5840 donations collected</span>
+            </div>
+        </div>
+
+        <script>
+
+            const video = document.getElementsByClassName("BG-video")[0];
+            const btn = document.querySelector(".Btn");
+            const headrplayicon = document.querySelector(".header-text-container .header-play-icon");
+            const headrpauseicon = document.querySelector(".header-text-container .header-pause-icon");
+
+            function videoPlay(event) {
+                if (video.paused) {
+                    video.play();
+                    btn.innerHTML = "Pause Video";
+                    headrplayicon.classList.add("hide");
+                    headrpauseicon.classList.remove("hide");
+                } else {
+                    video.pause();
+                    btn.innerHTML = "Play Video";
+                    headrplayicon.classList.remove("hide");
+                    headrpauseicon.classList.add("hide");
+                }
+            }
+
+        </script>
+
+    </header>
+
+    <main>
+
+
+
+        <div class="about-section-container">
+            <div class="about-section">
+                <div class="top-row">
+                    <div class="text-container">
+                        <div class="section-title">
+                            <span class="line"></span>
+                            <span class="title">know about us</span>
+                        </div>
+                        <div class="text">
+                            <h3 class="h-text">We help nature smile and survive everywhere</h3>
+                            <p class="p1-text">
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros
+                                elementum tristique.
+                            </p>
+                            <p class="p2-text">
+                                Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero
+                                vitae erat. Aenean faucibus nibh
+                                et justo cursus id rutrum lorem imperdiet. Nunc ut sem vitae risus tristique posuere.
+                            </p>
+                            <div class="learn-more-btn">
+                                <button>learn more</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="video-container" onclick=aboutVideoPlay(a)>
+                        <div class="icon-container hide">
+                            <i class="fa-solid fa-play"></i>
+                        </div>
+                        <video class="about-BG-video" src="video/about-BG.mp4" autoplay loop></video>
+                    </div>
+                </div>
+                <div class="bottom-coloum">
+                    <div class="title-row">
+                        <div class="title">
+                            <h3>our supporter</h3>
+                        </div>
+                        <span class="line"></span>
+                    </div>
+                    <div class="logo-row">
+                        <ul class="supporter-logo-list">
+                            <li class="logo-1">
+                                <img src="images/supporter-logo-1.jpg">
+                            </li>
+                            <li class="logo-2">
+                                <img src="images/supporter-logo-2.jpg">
+                            </li>
+                            <li class="logo-3">
+                                <img src="images/supporter-logo-3.jpg">
+                            </li>
+                            <li class="logo-4">
+                                <img src="images/supporter-logo-4.jpg">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+            <script>
+                const aboutvideo = document.getElementsByClassName("about-BG-video")[0];
+                const abouticon = document.querySelector(".about-section .top-row .video-container .icon-container")
+
+                function aboutVideoPlay(a) {
+                    if (aboutvideo.paused) {
+                        aboutvideo.play();
+                        abouticon.classList.add("hide");
+                    } else {
+                        aboutvideo.pause();
+                        abouticon.classList.remove("hide");
+                    }
+                }
+            </script>
+        </div>
+
+        <div class="what-section-container">
+            <div class="what-section">
+                <div class="row-container">
+                    <div class="text-container">
+                        <div class="section-title">
+                            <span class="line"></span>
+                            <h3 class="title">what we do</h3>
+                        </div>
+                        <div class="text">
+                            <h3 class="h-text">We care for earth, care for the coming birth</h3>
+                            <p class="p-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+                                varius enim in eros elementum tristique.</p>
+                        </div>
+                        <div class="function">
+                            <ul class="function-list">
+                                <li class="list-1">
+                                    <div class="icon">
+                                        <img src="images/f-icon-1.png">
+                                    </div>
+                                    <div class="f-text">
+                                        <h3 class="h-text">
+                                            Build Healthy Cities
+                                        </h3>
+                                        <p class="p-text">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius
+                                            enim
+                                            in eros.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="list-2">
+                                    <div class="icon">
+                                        <img src="images/f-icon-2.png">
+                                    </div>
+                                    <div class="f-text">
+                                        <h3 class="h-text">
+                                            Tree Plantation
+                                        </h3>
+                                        <p class="p-text">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius
+                                            enim
+                                            in eros.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="list-3">
+                                    <div class="icon">
+                                        <img src="images/f-icon-3.png">
+                                    </div>
+                                    <div class="f-text">
+                                        <h3 class="h-text">
+                                            Protect Land and Water
+                                        </h3>
+                                        <p class="p-text">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius
+                                            enim
+                                            in eros.
+                                        </p>
+                                    </div>
+                                </li>
+                                <li class="list-4">
+                                    <div class="icon">
+                                        <img src="images/f-icon-4.png">
+                                    </div>
+                                    <div class="f-text">
+                                        <h3 class="h-text">
+                                            Animal Safety
+                                        </h3>
+                                        <p class="p-text">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius
+                                            enim
+                                            in eros.
+                                        </p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="images/what-section-BG.png">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="project-section">
+            <div class="project">
+                <div class="coloum-container">
+                    <div class="text-container">
+                        <div class="section-title">
+                            <span class="line"></span>
+                            <h3 class="title">project we have done</h3>
+                        </div>
+                        <div class="text">
+                            <h3 class="h-text">We are Creating sustainable society, for everyone and forever.</h3>
+                        </div>
+                    </div>
+                    <div class="row-container">
+                        <div class="row r1">
+                            <div class="BG-container">
+                                <img src="images/project-row1-BG.png" alt="">
+                            </div>
+                            <div class="content-container">
+                                <div class="content">
+                                    <h3 class="h-text">Mission 40K: Tree plantation</h3>
+                                    <p class="p-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Suspendisse
+                                        varius enim in eros.</p>
+                                </div>
+                                <button class="see-more-btn">see more</button>
+                            </div>
+                        </div>
+                        <div class="row r2">
+                            <div class="BG-container">
+                                <img src="images/project-row2-BG.png">
+                            </div>
+                            <div class="content-container">
+                                <div class="content">
+                                    <h3 class="h-text">Weekly cleanliness program in city</h3>
+                                    <p class="p-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Suspendisse
+                                        varius enim in eros.</p>
+                                </div>
+                                <button class="see-more-btn">see more</button>
+                            </div>
+                        </div>
+                        <div class="row r3">
+                            <div class="BG-container">
+                                <img src="images/project-row3-BG.png">
+                            </div>
+                            <div class="content-container">
+                                <div class="content">
+                                    <h3 class="h-text">Wildlife safety program 2021</h3>
+                                    <p class="p-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                        Suspendisse
+                                        varius enim in eros.</p>
+                                </div>
+                                <button class="see-more-btn">see more</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats-section">
+            <div class="stats">
+                <div class="row-container">
+                    <div class="text-container">
+                        <div class="text">
+                            <h3 class="h-text">How we spend your donations and where it goes</h3>
+                            <p class="p-text">We understand that when you make a  donation, you want to know exactly
+                                where your money is going and we pledge to be
+                                transparent.</p>
+                        </div>
+                        <div class="stats-row">
+                            <ul class="stats-list">
+                                <li class="list l1">
+                                    <span class="box"></span>
+                                    <span class="text">40% planting trees</span>
+                                </li>
+                                <li class="list l2">
+                                    <span class="box"></span>
+                                    <span class="text">35% cleanliness program</span>
+                                </li>
+                                <li class="list l3">
+                                    <span class="box"></span>
+                                    <span class="text">10% helping people</span>
+                                </li>
+                                <li class="list l4">
+                                    <span class="box"></span>
+                                    <span class="text">10% animal safety</span>
+                                </li>
+                                <li class="list l5">
+                                    <span class="box"></span>
+                                    <span class="text">5% feeding the poor</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="chart-container">
+                        <div class="chart">
+                            <img src="images/Chart.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="CTA-section">
+            <div class="CTA">
+                <div class="content">
+                    <div class="CTA-BG">
+                        <img src="images/CTA-BG.png">
+                    </div>
+                    <div class="text-container">
+                        <h3 class="h-text">You can contribute to make the environment greener!</h3>
+                        <div class="button-container">
+                            <button class="join-btn">Join as a volunteer</button>
+                            <button class="donate-btn">Donate</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="Blog-section">
+            <div class="Blog">
+                <div class="title-container">
+                    <h3 class="title">
+                        Read Our News
+                    </h3>
+                    <span class="line"></span>
+                </div>
+                <div class="row-container">
+                    <div class="row">
+                        <img src="images/blog-img1.png">
+                        <h3 class="h-text">Don’t destroy greenery and don’t spoil scenery</h3>
+                        <p class="p-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius
+                            enim</p>
+                    </div>
+                    <div class="row">
+                        <img src="images/blog-img2.png">
+                        <h3 class="h-text">Is climate change happening faster than expected?</h3>
+                        <p class="p-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius
+                            enim</p>
+                    </div>
+                    <div class="row">
+                        <img src="images/blog-img3.png">
+                        <h3 class="h-text">Top 10 facts about wind farms you didn't know</h3>
+                        <p class="p-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius
+                            enim</p>
+                    </div>
+                    <div class="row">
+                        <img src="images/blog-img4.png">
+                        <h3 class="h-text">Our goal is to make water available for everyone</h3>
+                        <p class="p-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius
+                            enim</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+    </main>
+
+
+
+
+
+
+</body>
+
+</html>
